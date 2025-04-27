@@ -65,5 +65,8 @@ async def monitor_rsi():
 
         await asyncio.sleep(CHECK_INTERVAL)
 
-# ==== Start Monitoring ====
-asyncio.run(monitor_rsi())
+async def main():
+    await monitor_rsi()
+
+if __name__ == "__main__":
+    asyncio.run(main())
